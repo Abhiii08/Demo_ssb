@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Sairaj Buildcon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var navlinks = document.getElementById("navlinks");
+
+        function showmenu() {
+            navlinks.style.right = "0";
+        }
+
+        function hidemenu() {
+            navlinks.style.right = "-200px";
+        }
+        document.querySelector(".fa-bars").onclick = showmenu;
+        document.querySelector(".fa-times").onclick = hidemenu;
+});
+
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="Images/Logo.png" alt="" name="logo">
+            </a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Shree Sairaj Buildcon</h1>
+            <p>Building visions. Creating reality</p>
+        </div>
+    </section>
+
+    <!--- Our Founders -->
+    <section class="founders">
+        <h1>Our founders</h1>
+        <div class="f-row">
+            <div class="founders-col">
+                <a href=""><img src="Images/temp.jpg" alt=""></a>
+                
+                <h3><b>Santosh Tote</b></h3>
+                <h5>Director</h5>
+                <p>Santosh Tote is a visionary leader with expertise in strategic planning and organizational growth. </p>
+            </div>
+            <div class="founders-col">
+                <a href=""><img src="Images/temp.jpg" alt=""></a>
+                <h3><b>Ganesh Pohane</b></h3>
+                <h5>Director</h5>
+                <p>Ganesh Pohane is a visionary leader with expertise in strategic planning and organizational growth. </p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!--- Ongoing Projects --->
+    <section class="projects">
+        <h1>Ongoing Projects</h1>
+
+        <div class="row">
+            <div class="projects-col" name="ace">
+                <a href="projects.html"><img src="Images/ace.jpg" alt=""></a>
+                <h3>Ace Atmosphere</h3>
+                <p>Ravet, Pune</p>
+            </div>
+            <div class="projects-col" name="bella">
+                <a href="projects.html"><img src="Images/bella.jpg" alt=""></a>
+                <h3>Bella Casa</h3>
+                <p>Ambegaon, Pune</p>
+            </div>
+            <div class="projects-col" name="solitare">
+                <a href="projects.html"><img src="Images/solitare.jpg" alt=""></a>
+                <h3>The Solitare</h3>
+                <p>Sambhajinagar</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--- Completed Projects --->
+    <section class="projects">
+        <h1>Completed Projects</h1>
+
+        <div class="row">
+            <div class="projects-col">
+                <a href="projects.html"><img src="Images/k11.jpg" alt=""></a>
+                <h3>K-11 La Vida</h3>
+                <p>Balewadi, Pune</p>
+            </div>
+            <div class="projects-col">
+                <a href="projects.html"><img src="Images/avon.jpg" alt=""></a>
+                <h3>Avon Vista</h3>
+                <p>Mahalunge, Pune</p>
+            </div>
+            <div class="projects-col">
+                <a href="projects.html"><img src="Images/solt.jpg" alt=""></a>
+                <h3>The Solitare</h3>
+                <p>Sambhajinagar</p>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

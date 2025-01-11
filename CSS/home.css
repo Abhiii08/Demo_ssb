@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 30px;
+}
+
+/*--- header ---*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.767)), url(/Images/Header1.jpg);
+    background-size: cover;
+    position:relative;
+}
+
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    padding-top: 10px;
+    background: rgba(0, 0, 0, 0.642);
+    backdrop-filter: blur(15px);
+    height: 50px;
+    width: 100%;
+}
+
+.nav-links{
+    flex:1;
+    text-align: right;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 3px 13px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav h3{
+    color: white;
+    font-size: 25px;
+}
+
+nav span{
+    color:red
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.text-box h1{
+    font-size: 55px;
+    text-shadow: 1px 1px 5px rgb(255, 0, 0)
+}
+
+.text-box h5{
+    font-size: 20px;
+    margin: 10px 0 40px;
+    font-style: italic;
+    font-weight: lighter;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+    .text-box h5{
+        font-size: 15px;
+    }
+    nav h3{
+        font-size: 20px;
+        position: absolute;
+        top: 25%;
+    }
+    nav ul li{
+        display: block;
+        padding-top: 20px;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.17) 100%);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/*--- Vision ---*/
+.vision{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 2%;
+
+}
+
+.vision-box{
+    padding: 2em;
+    border-radius: 10px;
+    background-color: rgb(204, 204, 204);
+    text-align: center;
+    transition: 0.3s;
+} 
+
+.vision-box:hover{
+    box-shadow: 0px 0px 10px 15px rgba(0, 0, 0, 0.499); 
+    letter-spacing: 2.5px;
+}
+
+.vision-box p{
+    letter-spacing: 0;
+}
+
+.grid-container{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap:40px;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.vision-box span{
+    color:red
+}
+
+@media(max-width:700px){
+
+}
+
+
+/*--- team ---*/
+.team{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+    color: white;
+}
+
+.team h2{
+    color: black;
+    text-align: center;
+}
+
+.wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#card-area{
+    padding: 30px 0;
+}
+
+.box-area{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-gap: 120px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#team-box{
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: bebas neue;
+    letter-spacing: 1.5px;
+}
+
+.boxLhover img{
+    transform: scale(1.2);
+}
+
+.box:hover .overlay{
+    height: 150%;
+}
+
+@media(max-width:700px){
+    .box-area{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 50px;
+    }
+}
+
+/* Value */
+.value{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.col p, .col span{
+    display: inline;
+    font-size: 25px;
+}
+
+.col p{
+    color: red;
+}
+
+.col span{
+    font-weight: bold;
+}
+
+.value-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 2%;
+    grid-gap: 40px;
+    padding-bottom: 20px;
+}
+
+/* Ongoing Projects */
+.ongoing-projects{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.ongoing-projects h2{
+    text-align: center;
+    margin-top: 1.5%;
+}

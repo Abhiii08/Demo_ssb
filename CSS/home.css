@@ -513,6 +513,9 @@ nav .fa{
     margin-top: 1.5%;
     padding-bottom: 50px;
     font-size: 30px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 #avon{

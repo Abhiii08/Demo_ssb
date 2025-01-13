@@ -1,10 +1,31 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h2{
-    font-size: 30px;
+
+@media(max-width:700px){
+    h2{
+        font-size: 23px;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0.3;
+        scale:0.7;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+hr{
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 /*--- header ---*/
@@ -43,7 +64,8 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 nav ul li a:hover{
@@ -71,12 +93,12 @@ nav span{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
 }
 
 .text-box h1{
-    font-size: 55px;
-    text-shadow: 1px 1px 5px rgb(255, 0, 0)
+    font-size: 50px;
+    text-shadow: 1px 1px 5px rgb(255, 0, 0);
+    padding-bottom: 10px;
 }
 
 .text-box h5{
@@ -91,7 +113,7 @@ nav .fa{
 
 @media(max-width:700px){
     .text-box h1{
-        font-size: 30px;
+        font-size: 28px;
     }
     .text-box h5{
         font-size: 15px;
@@ -131,22 +153,24 @@ nav .fa{
     width: 100%;
     background: rgb(255, 255, 255);
     margin: auto;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     text-align: center;
-    margin-top: 2%;
-
+    margin-top: 2%
 }
 
 .vision-box{
     padding: 2em;
     border-radius: 10px;
-    background-color: rgb(204, 204, 204);
+    background-color: rgba(204, 204, 204, 0.395);
     text-align: center;
     transition: 0.3s;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 } 
 
 .vision-box:hover{
-    box-shadow: 0px 0px 10px 15px rgba(0, 0, 0, 0.499); 
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.499); 
     letter-spacing: 2.5px;
 }
 
@@ -188,6 +212,11 @@ nav .fa{
 .team h2{
     color: black;
     text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 .wrapper{
@@ -201,14 +230,14 @@ nav .fa{
 
 .box-area{
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 250px 250px;
     grid-gap: 120px;
     justify-content: center;
     padding-bottom: 30px;
 }
 
 #team-box{
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
     padding-left: 150px;
     padding-right: 150px;
 }
@@ -217,11 +246,23 @@ nav .fa{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+#team-box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s;
 }
 
 .box img{
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -243,17 +284,20 @@ nav .fa{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     transition: height 0.5s;
 
 }
 
 .overlay h3{
-    font-weight: 500;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
     margin-top: 80%;
-    font-family: bebas neue;
     letter-spacing: 1.5px;
+    font-size: 16px;
+}
+
+.overlay h5{
+    font-size: 13px;
 }
 
 .boxLhover img{
@@ -261,13 +305,45 @@ nav .fa{
 }
 
 .box:hover .overlay{
-    height: 150%;
+    height: 100%;
 }
 
+#name{
+    font-size: 20px;
+}
+
+#team-box h3{
+    font-size: 18px;
+}
+
+
 @media(max-width:700px){
+    .team h2{
+        font-size: 27px;
+    }
     .box-area{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 130px 130px;
         grid-gap: 50px;
+    }
+    .box img{
+        height: 150px;
+    }
+    .overlay{
+        
+    }
+    #name{
+        font-size: 17px;
+    }
+    #team-box{
+        grid-template-columns: 130px 130px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #team-box img{
+        height: 150px;
+    }
+    #team-box h3{
+        font-size: 17px;
     }
 }
 
@@ -300,9 +376,8 @@ nav .fa{
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 2%;
     grid-gap: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 /* Ongoing Projects */
@@ -315,7 +390,195 @@ nav .fa{
     background: rgb(255, 255, 255);
 }
 
+.project-grid h3{
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+.project-grid a{
+    text-decoration: none;
+    color: white;
+}
+
+.project-grid p{
+    font-size: 14px;
+}
+
 .ongoing-projects h2{
     text-align: center;
     margin-top: 1.5%;
+    padding-bottom: 50px;
+    font-size: 30px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 10px;
+    justify-content: center;
+    padding-bottom: 50px;
+    position: relative;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.project-col{
+    transition: 0.3s;
+    position: relative;
+   
+}
+
+.project-col p{
+    letter-spacing: 0;
+}
+
+.project-col:hover{
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.558);
+    
+}
+
+#ace{
+    height: 230px;
+    background-image: url(/Images/ace.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#bella{
+    height: 230px;
+    background-image: url(/Images/bella.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#levi{
+    height: 230px;
+    background-image: url(/Images/leviance.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#tirth{
+    height: 230px;
+    background-image: url(/Images/avon.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.project-col{
+    text-align: center;
+}
+
+@media(max-width:700px){
+    .ongoing-projects h2{
+        font-size: 27px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Completed projects */
+.completed-projects{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.completed-projects h2{
+    text-align: center;
+    margin-top: 1.5%;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+#avon{
+    height: 230px;
+    background-image: url(/Images/avon.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#k11{
+    height: 230px;
+    background-image: url(/Images/k11.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#baner{
+    height: 230px;
+    background-image: url(/Images/baner.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#kohinoor{
+    height: 230px;
+    background-image: url(/Images/kohinoor.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+@media(max-width:700px) {
+    .completed-projects h2{
+        font-size: 27px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Quality practices */
+.quality{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 30px;
+}
+.quality h2{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+@media(max-width:700px){
+    .quality h2{
+        font-size: 27px;
+    }
 }

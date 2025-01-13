@@ -28,6 +28,10 @@ hr{
     animation-range: entry 0% cover 45%;
 }
 
+.button{
+    align-items: center;
+}
+
 /*--- header ---*/
 .header{
     min-height: 100vh;
@@ -207,6 +211,7 @@ nav .fa{
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
     color: white;
+    
 }
 
 .team h2{
@@ -322,11 +327,11 @@ nav .fa{
         font-size: 27px;
     }
     .box-area{
-        grid-template-columns: 130px 130px;
+        grid-template-columns: 225px;
         grid-gap: 50px;
     }
     .box img{
-        height: 150px;
+        height: 250px;
     }
     .overlay{
         
@@ -388,6 +393,9 @@ nav .fa{
     margin: auto;
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 .project-grid h3{
@@ -410,9 +418,6 @@ nav .fa{
     margin-top: 1.5%;
     padding-bottom: 50px;
     font-size: 30px;
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
 }
 
 .project-grid{
@@ -425,9 +430,7 @@ nav .fa{
     justify-content: center;
     padding-bottom: 50px;
     position: relative;
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
+    
 }
 
 .project-col{
@@ -506,6 +509,9 @@ nav .fa{
     margin: auto;
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 .completed-projects h2{
@@ -513,9 +519,6 @@ nav .fa{
     margin-top: 1.5%;
     padding-bottom: 50px;
     font-size: 30px;
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
 }
 
 #avon{
@@ -583,5 +586,7 @@ nav .fa{
 @media(max-width:700px){
     .quality h2{
         font-size: 27px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 }

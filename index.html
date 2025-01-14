@@ -9,11 +9,19 @@
     <!--- Icon links --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
     <!--- CSS files links --->
     <link rel="stylesheet" href="/CSS/home.css">
+    <!--Font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--Script link-->
     <script src="home.js"></script>
+    <script src="slider.js"></script>
+
     <section class="header">
         <video autoplay loop muted plays-inline class="bg-video" poster="/Images/poster.png">
             <source src="/Images/bg-video.mp4" type="video/mp4">
@@ -28,7 +36,7 @@
                     <li><a href="#">RESOURCES</a></li>
                     <li><a href="#">POLICIES</a></li>
                     <li><a href="#">EVENTS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="/Templates/contact.html">CONTACT US</a></li>
                     <li><a href="#">ABOUT US</a></li>
                 </ul>
             </div>
@@ -36,7 +44,7 @@
         </nav>
         <div class="text-box">
             <h1>Shree Sairaj Buildcon</h1> 
-            <h5>Quality You Deserve & <br>Dependability You Can Count on
+            <h5>Where Quality Never Needs An Introduction
             </h5>
         </div>
     </section>
@@ -197,60 +205,121 @@
     </section>
     <section class="ongoing-projects">
         <h2>Ongoing <span>Projects</span></h2>
-        <div class="project-grid">
-            <div class="project-col" id="ace">
-                <a href="ongoing-projects.html"><h3>Ace Atmosphere</h3></a>
-                <p>Ravet, Pune</p>
-            </div>
-            <div class="project-col" id="bella">
-                <a href="ongoing-projects.html">
-                    <h3>Bella Casa</h3>
+        <div class="project-container">
+            <button class="slider-button left" onclick="scrollLeft()">&#8249;</button>
+
+            <div class="project-grid slide">
+                <a href="/Templates/ace.html">
+                    <div class="project-col" id="ace">
+                        <h3>Ace Atmosphere</h3>
+                        <p>Ravet, Pune</p>
+                    </div>
                 </a>
-                <p>Ambegaon, Pune</p>
+                <a href="/Templates/windsor.html">
+                    <div class="project-col" id="windsor">
+                        <h3>Windsor County</h3>
+                        <p>Pune</p>
+                    </div>
+                </a>
+                <a href="/Templates/prath.html"> 
+                    <div class="project-col" id="prath">
+                        <h3>Prathamesh Sanskruti</h3>
+                        <p>Pune</p>
+                    </div>
+                </a>
+                <a href="/Templates/bella.html">
+                    <div class="project-col" id="bella">
+                        <h3>Bella Casa</h3>
+                        <p>Ambegaon, Pune</p>
+                    </div>
+                </a>
+                <a href="/Templates/levi.html">
+                    <div class="project-col" id="levi">
+                        <h3>Leviance</h3>
+                        <p>Pashan, Pune</p>
+                    </div>
+                </a>
+                <a href="/Templates/tirth.html">
+                    <div class="project-col" id="tirth">
+                        <h3>Tirth</h3>
+                        <p>Sus, Pune</p>
+                    </div>
+                </a>
             </div>
-            <div class="project-col" id="levi">
-                <a href="ongoing-projects.html"><h3>Leviance</h3></a>
-                <p>Pashan, Pune</p>
-            </div>
-            <div class="project-col" id="tirth">
-                <a href="ongoing-projects.html"><h3>Tirth</h3></a>
-                
-                <p>Sus, Pune</p>
-            </div>
+            <button class="slider-button right" onclick="scrollRight()">&#8250;</button>
         </div>
+        
         <hr style="color: black; width: 90%; position: absolute; left:5%;">
     </section>
     <section class="completed-projects">
-        <h2>Completed <span>Projects</span></h2>
-        <div class="project-grid">
-            <div class="project-col" id="avon">
-                <a href="completed-projects.html"><h3>Avon Vista</h3></a>
-                <p>Wakad, Pune</p>
+        <h2>Recently Completed <span>Projects</span></h2>
+        <div class="project-container">
+            <button class="slider-button left" onclick="scrollLeft()">&#8249;</button>
+            <div class="project-grid slide">
+                <a href="completed.projects.html">
+                    <div class="project-col" id="avon">
+                        <h3>Avon Vista</h3>
+                        <p>Wakad, Pune</p>
+                    </div>
+                </a>
+                <a href=""><div class="project-col" id="k11">
+                    <h3>K-11 La Vida</h3>
+                    <p>Mahalunge, Pune</p>
+                </div>
+                </a>
+                <a href="">
+                    <div class="project-col" id="baner">
+                        <h3>Baner One</h3>
+                        <p>Baner, Pune</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="project-col" id="kohinoor">
+                        <h3>Kohinoor Planet</h3>
+                         <p>Aundh, Pune</p>
+                     </div>
+                </a>
             </div>
-            <div class="project-col" id="k11">
-                <a href="completed-projects.html"><h3>K-11 La Vida</h3></a>
-                <p>Mahalunge, Pune</p>
-            </div>
-            <div class="project-col" id="baner">
-                <a href="completed-projects.html"><h3>Baner One</h3></a>
-                    <p>Baner, Pune</p>
-            </div>
-            <div class="project-col" id="kohinoor">
-                <a href="completed-projects.html"><h3>Kohinoor Planet</h3></a>
-                <p>Aundh, Pune</p>
-            </div>
+            <button class="slider-button right" onclick="scrollRight()">&#8250;</button>
         </div>
+        
         <hr style="color: black; width: 90%; position: absolute; left:5%;">
     </section>
     <section class="quality">
-        <h2>Quality & Safety Practices </h2>
-        <div>
+        <h2>Quality & Safety Practices</h2>
+        <div class="quality-container">
+            <button class="slider-button left" onclick="scrollLeft()">&#8249;</button>
 
+            <div class="quality-grid slide">
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" alt="">
+                    <h3>Safety week</h3>
+                </div>
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" 
+                    alt="">
+                    <h3>Safety lab</h3>
+                </div>
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" alt="">
+                    <h3>Quality lab</h3>
+                </div>
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" alt="">
+                    <h3>Tool box talk</h3>
+                </div>
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" alt="">
+                    <h3>Safety signages</h3>
+                </div>
+                <div class="quality-col">
+                    <img src="/Images/demo-bg.png" alt="">
+                    <h3>Safety signages</h3>
+                </div>
+            </div>
+            
+            <button class="slider-button right" onclick="scrollRight()">&#8250;</button>
         </div>
-        <hr style="color: black; width: 90%; position: absolute; left:5%;">
-    </section>
-    <section>
-
-    
+    </section>  
 </body>
 </html>

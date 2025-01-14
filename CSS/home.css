@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: "Nunito Sans", serif;
+    box-sizing: border-box;
 }
 
 
@@ -14,7 +15,7 @@
 @keyframes appear{
     from{
         opacity: 0.3;
-        scale:0.7;
+        scale:0.8;
     }
     to{
         opacity: 1;
@@ -27,7 +28,6 @@ hr{
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 }
-
 
 /*--- header ---*/
 .header{
@@ -172,9 +172,6 @@ nav .fa{
         font-size: 20px;
         cursor: pointer;
     }
-    .bg-video{
-        object-fit: cover;
-    }
 }
 
 /*--- Vision ---*/
@@ -187,12 +184,17 @@ nav .fa{
     margin-top: 2%
 }
 
+.vision h3{
+    font-size: 27px;
+}
+
 .vision-box{
     padding: 2em;
     border-radius: 10px;
     background-color: rgba(204, 204, 204, 0.395);
     text-align: center;
     transition: 0.3s;
+    scale: 1;
     animation: appear 4.5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
@@ -201,6 +203,7 @@ nav .fa{
 .vision-box:hover{
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.499); 
     letter-spacing: 2.5px;
+    scale: 1.05;
 }
 
 .vision-box p{
@@ -243,7 +246,7 @@ nav .fa{
     color: black;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 30px;
+    font-size: 27px;
     animation: appear 4.5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
@@ -267,7 +270,7 @@ nav .fa{
 }
 
 #team-box{
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(175px,1fr));
     padding-left: 150px;
     padding-right: 150px;
 }
@@ -283,7 +286,7 @@ nav .fa{
 
 #team-box img{
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -352,17 +355,15 @@ nav .fa{
         font-size: 27px;
     }
     .box-area{
-        grid-template-columns: 225px;
+        grid-template-columns: 300px;
         grid-gap: 50px;
     }
     .box img{
-        height: 250px;
-    }
-    .overlay{
-        
+        height: 330px;
     }
     #name{
-        font-size: 17px;
+        font-size: 20px;
+        letter-spacing: 0.5px;
     }
     #team-box{
         grid-template-columns: 130px 130px;
@@ -423,15 +424,12 @@ nav .fa{
     margin: auto;
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
+    
 }
 
 .project-grid h3{
     font-size: 20px;
     text-decoration: none;
-    
 }
 
 .project-grid a{
@@ -446,27 +444,76 @@ nav .fa{
 .ongoing-projects h2{
     text-align: center;
     margin-top: 1.5%;
-    padding-bottom: 50px;
-    font-size: 30px;
+    padding-bottom: 10px;
+    font-size: 27px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
-.project-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 40px;
-    padding-right: 50px;
-    padding-left: 50px;
-    border-radius: 10px;
+.project-grid {
+    display: grid; /* Keep the grid layout */
+    grid-auto-flow: column; /* Make grid items flow horizontally */
+    grid-auto-columns: 300px; /* Set column size */
+    grid-template-columns: 300px;
+    gap: 20px; /* Spacing between grid items */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 30px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.project-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 50px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s ease;
+    scale: 1;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.slider-button.left {
+    left: 40px;
+}
+
+.slider-button.right {
+    right: 40px;
+}
+
+.slider-button:hover {
+    scale: 1.1;
+}
+
+.project-container {
     position: relative;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .project-col{
     transition: 0.3s;
     position: relative;
-   
 }
 
 .project-col p{
@@ -476,7 +523,27 @@ nav .fa{
 .project-col:hover{
     letter-spacing: 2px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.558);
-    
+    scale: 1.05
+}
+
+#windsor{
+    height: 230px;
+    background-image: url(/Images/windsor.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#prath{
+    height: 230px;
+    background-image: url(/Images/prath.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 #ace{
@@ -527,7 +594,10 @@ nav .fa{
     .ongoing-projects h2{
         font-size: 27px;
         padding-top: 15px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    .slider-button{
+        display: none;
     }
 }
 
@@ -539,16 +609,17 @@ nav .fa{
     margin: auto;
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
+    
 }
 
 .completed-projects h2{
     text-align: center;
     margin-top: 1.5%;
-    padding-bottom: 50px;
-    font-size: 30px;
+    padding-bottom: 10px;
+    font-size: 27px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 #avon{
@@ -595,28 +666,89 @@ nav .fa{
     .completed-projects h2{
         font-size: 27px;
         padding-top: 15px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    .slider-button{
+        display: none;
     }
 }
 
 /* Quality practices */
 .quality{
     width: 100%;
-    margin: auto;
     position: relative;
+    z-index: 0;
+    margin: auto;
     padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+    min-height: 100vh;
 }
+
 .quality h2{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 30px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    font-size: 27px;
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.quality-container{
+    position: relative;
+    width: 100%;
+}
+
+.quality-grid{
+    display: grid; /* Keep the grid layout */
+    grid-auto-flow: column; /* Make grid items flow horizontally */
+    grid-auto-columns: 375px; /* Set column size */
+    grid-template-columns: 375px;
+    gap: 20px; /* Spacing between grid items */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    animation: appear 4.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+    margin: 15px;
+    align-items: center;
+}
+
+.quality-col img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.quality-col h3{
+    background: rgba(0, 0, 0, 0.705);
+    position: absolute;
+    top: 80%;
+    padding: 5px 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+}
+
+.quality-col{
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.quality-col:hover{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.558);
 }
 
 @media(max-width:700px){
-    .quality h2{
-        font-size: 27px;
-        padding-right: 5px;
-        padding-left: 5px;
+    .quality-container .slider-button{
+        display: block;
     }
 }

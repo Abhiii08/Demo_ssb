@@ -288,7 +288,7 @@ nav .fa{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 50%;
     display: block;
     transition: transform 0.3s;
 }

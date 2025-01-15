@@ -12,21 +12,26 @@
     }
 }
 
-@keyframes appear{
-    from{
-        opacity: 0.3;
-        scale:0.8;
+@keyframes appear {
+    from {
+        opacity: 0.5;
+        transform: scale(0.8);
     }
-    to{
+    to {
         opacity: 1;
-        scale: 1;
+        transform: scale(1);
     }
 }
 
+
 hr{
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*--- header ---*/
@@ -186,16 +191,18 @@ nav .fa{
 
 .vision h3{
     font-size: 27px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.889);
+    font-weight: 600;
 }
 
 .vision-box{
     padding: 2em;
     border-radius: 10px;
-    background-color: rgba(204, 204, 204, 0.395);
+    background: linear-gradient( rgb(255, 0, 0, 60%),rgb(255, 255, 255));
     text-align: center;
     transition: 0.3s;
     scale: 1;
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 } 
@@ -215,9 +222,9 @@ nav .fa{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap:40px;
-    justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 30px;
 }
 
 .vision-box span{
@@ -225,7 +232,24 @@ nav .fa{
 }
 
 @media(max-width:700px){
-
+    .grid-container{
+        display: grid; /* Keep the grid layout */
+        grid-auto-flow: column; /* Make grid items flow horizontally */
+        grid-auto-columns: 325px; /* Set column size */
+        grid-template-columns: 325px;
+        gap: 20px; /* Spacing between grid items */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 60px 40px 30px 40px;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+        scrollbar-width: none;
+        animation: appear 2.5s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+    .vision-box:hover{
+        display: none;
+    }
 }
 
 
@@ -247,7 +271,7 @@ nav .fa{
     text-align: center;
     padding-bottom: 20px;
     font-size: 27px;
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 }
@@ -279,16 +303,16 @@ nav .fa{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 45%;
 }
 
 #team-box img{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10px;
     display: block;
     transition: transform 0.3s;
 }
@@ -305,7 +329,7 @@ nav .fa{
 .overlay{
     height: 0;
     width: 100%;
-    background: linear-gradient(transparent, #1c1c1c 58%);
+    background: linear-gradient(white, rgb(255, 0, 0));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -349,32 +373,42 @@ nav .fa{
     font-size: 18px;
 }
 
+.team-text{
+    color: black; 
+    text-align: center; 
+    font-style: italic; 
+    font-size: 14px;
+}
 
 @media(max-width:700px){
     .team h2{
         font-size: 27px;
     }
     .box-area{
-        grid-template-columns: 300px;
+        grid-template-columns: 250px;
         grid-gap: 50px;
     }
     .box img{
-        height: 330px;
+        height: 275px;
     }
     #name{
         font-size: 20px;
         letter-spacing: 0.5px;
     }
     #team-box{
-        grid-template-columns: 130px 130px;
+        grid-template-columns: 140px 140px;
         padding-left: 50px;
         padding-right: 50px;
     }
     #team-box img{
-        height: 130px;
+        height: 140px;
+        border-radius: 50%;
     }
     #team-box h3{
-        font-size: 17px;
+        font-size: 18px;
+    }
+    .overlay{
+        display: none;
     }
 }
 
@@ -404,11 +438,12 @@ nav .fa{
 
 .value-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
     padding-left: 30px;
     padding-right: 30px;
-    grid-gap: 40px;
+    grid-gap: 20px;
     padding-bottom: 30px;
+    justify-content: space-evenly;
 }
 
 .value img{
@@ -446,7 +481,7 @@ nav .fa{
     margin-top: 1.5%;
     padding-bottom: 10px;
     font-size: 27px;
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 }
@@ -462,7 +497,7 @@ nav .fa{
     scroll-behavior: smooth;
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scrollbar-width: none; /* Hide scrollbar for Firefox */
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 }
@@ -488,9 +523,6 @@ nav .fa{
     z-index: 10;
     transition: 0.3s ease;
     scale: 1;
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
 }
 
 .slider-button.left {
@@ -514,6 +546,9 @@ nav .fa{
 .project-col{
     transition: 0.3s;
     position: relative;
+    animation: appear 2.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .project-col p{
@@ -530,7 +565,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/windsor.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -540,7 +575,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/prath.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -550,7 +585,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/ace.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -560,7 +595,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/bella.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -570,7 +605,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/leviance.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -580,7 +615,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/avon.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -598,6 +633,13 @@ nav .fa{
     }
     .slider-button{
         display: none;
+    }
+    .project-grid{
+        grid-template-columns: 250px;
+        grid-auto-columns: 250px;
+    }
+    #windsor, #ace, #bella, #levi, #tirth, #prath{
+        height: 200px;
     }
 }
 
@@ -617,7 +659,7 @@ nav .fa{
     margin-top: 1.5%;
     padding-bottom: 10px;
     font-size: 27px;
-    animation: appear 4.5s linear;
+    animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
 }
@@ -626,7 +668,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/avon.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -636,7 +678,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/k11.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -646,7 +688,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/baner.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -656,7 +698,7 @@ nav .fa{
     height: 230px;
     background-image: url(/Images/kohinoor.jpg);
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 0px;
     padding-top: 20px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -671,84 +713,155 @@ nav .fa{
     .slider-button{
         display: none;
     }
+    #avon, #k11, #baner, #kohinoor{
+        height: 200px
+    }
 }
 
-/* Quality practices */
-.quality{
+/* Tabs island */
+.tabs{
     width: 100%;
     position: relative;
     z-index: 0;
     margin: auto;
     padding-bottom: 30px;
     background: rgb(255, 255, 255);
-    min-height: 100vh;
 }
 
-.quality h2{
+
+#tab-textbox{
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 25px;
-    font-size: 27px;
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
-}
-
-.quality-container{
-    position: relative;
-    width: 100%;
-}
-
-.quality-grid{
-    display: grid; /* Keep the grid layout */
-    grid-auto-flow: column; /* Make grid items flow horizontally */
-    grid-auto-columns: 375px; /* Set column size */
-    grid-template-columns: 375px;
-    gap: 20px; /* Spacing between grid items */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 20px;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    animation: appear 4.5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
-    margin: 15px;
-    align-items: center;
-}
-
-.quality-col img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    position: relative;
-}
-
-.quality-col h3{
-    background: rgba(0, 0, 0, 0.705);
-    position: absolute;
-    top: 80%;
-    padding: 5px 20px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-    border-radius: 5px;
-}
-
-.quality-col{
-    border-radius: 10px;
-    transition: 0.3s;
-    position: relative;
-}
-
-.quality-col:hover{
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.558);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 @media(max-width:700px){
-    .quality-container .slider-button{
-        display: block;
-    }
+}
+
+/* Routes */
+.route{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding-bottom: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.tabs-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px;
+    gap: 40px;
+
+}
+
+.tab-card{
+    width: 100%;
+    height: 300px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(rgba(255, 0, 0, 70%),white);
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.595);
+    position: relative;
+    animation: appear 2.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tab-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tab-card:hover{
+    color: rgb(0, 0, 0);
+    background: red;
+}
+
+.tab-card button{
+    position: absolute;
+    top: 80%;
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+    border: 0;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.664);
+}
+
+.tab-text{
+    position: absolute;
+    top:65%;
+    background: rgba(255, 0, 0, 0.822);
+    padding: 5px;
+    padding-bottom: 0;
+    border-radius: 10px;
+}
+
+.route .tab-text{
+    background: none;
+    padding: none;
+    top: 25px;
+}
+
+.route .tab-card button{
+    top:70%
+}
+
+.tab-text h3{
+    font-size: 20px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+
+.tab-card button:hover{
+    background: black;
+    color: rgb(255, 255, 255);
+    box-shadow: none
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    padding: 30px;
+    background: rgb(0, 0, 0);
+    margin-top: 2%;
+    padding-bottom: 60px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding: 30px;
+    gap:40px;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.footer-card{
+    color: white;
+    text-align: left;
+    text-shadow: 1px 1px 2px black;
+}
+
+.footer-card h5{
+    position: relative;
+}
+
+.footer-card img{   
+    width: 20px;
+    height: 20px;
+}
+
+.footer hr{
+    animation: none;
 }

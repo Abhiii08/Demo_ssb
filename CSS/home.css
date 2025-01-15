@@ -232,7 +232,7 @@ nav .fa{
 }
 
 .vision-box span{
-    color:white
+    color:red
 }
 
 @media(max-width:700px){
@@ -644,6 +644,9 @@ nav .fa{
     }
     #windsor, #ace, #bella, #levi, #tirth, #prath{
         height: 200px;
+    }
+    .project-col:hover{
+        display: none;
     }
 }
 

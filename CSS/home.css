@@ -195,7 +195,7 @@ nav .fa{
 
 .vision h3{
     font-size: 27px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.889);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.784);
     font-weight: 600;
 }
 
@@ -252,7 +252,9 @@ nav .fa{
         animation-range: entry 0% cover 45%;
     }
     .vision-box:hover{
-        display: none;
+        box-shadow: none;
+        letter-spacing: 0;
+        scale: 1;
     }
 }
 
@@ -646,7 +648,9 @@ nav .fa{
         height: 200px;
     }
     .project-col:hover{
-        display: none;
+        letter-spacing: 0;
+        box-shadow: none;
+        scale: 0
     }
 }
 
@@ -867,6 +871,7 @@ nav .fa{
 .footer-card img{   
     width: 20px;
     height: 20px;
+    margin:5px
 }
 
 .footer hr{

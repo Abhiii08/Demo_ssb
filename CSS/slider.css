@@ -28,3 +28,7 @@
 .slider-button:hover {
     scale: 1.1;
 }
+
+@media(max-width:700px){
+    .slider-button{
+        display: none;

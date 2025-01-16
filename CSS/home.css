@@ -298,7 +298,7 @@ hr{
         grid-template-columns: 150px;
         gap: 20px; /* Spacing between grid items */
         overflow-x: auto; /* Enable horizontal scrolling */
-        padding-left: 10px;
+        padding-left: 30px;
         padding-right: 10px;
         scroll-behavior: smooth;
         -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
@@ -343,8 +343,9 @@ hr{
     padding-left: 30px;
     padding-right: 30px;
     grid-gap: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     justify-content: space-evenly;
+    padding-top: 10px;
 }
 
 .value img{

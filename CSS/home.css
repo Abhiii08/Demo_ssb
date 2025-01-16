@@ -188,20 +188,19 @@ nav .fa{
     width: 100%;
     background: rgb(255, 255, 255);
     margin: auto;
-    padding-bottom: 30px;
     text-align: center;
     margin-top: 2%
 }
 
 .vision h3{
     font-size: 27px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.784);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.784);
     font-weight: 600;
 }
 
 .vision-box{
     padding: 2em;
-    border-radius: 10px;
+
     background: linear-gradient( rgb(255, 0, 0, 60%),rgb(255, 255, 255));
     text-align: center;
     transition: 0.3s;
@@ -231,6 +230,17 @@ nav .fa{
     padding-bottom: 30px;
 }
 
+.vision-textbox{
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.vision-textbox span{
+    font-style: italic;
+    font-size:18px
+}
+
 .vision-box span{
     color:rgb(253, 40, 40)
 }
@@ -255,6 +265,12 @@ nav .fa{
         box-shadow: none;
         letter-spacing: 0;
         scale: 1;
+    }
+    .vision-textbox{
+        font-size: 15px;
+    }
+    .vision-textbox span{
+        font-size: 16px;
     }
 }
 
@@ -308,7 +324,7 @@ nav .fa{
 .box{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+
     animation: appear 2.5s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 45%;
@@ -318,7 +334,7 @@ nav .fa{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+
     display: block;
     transition: transform 0.3s;
 }
@@ -327,7 +343,7 @@ nav .fa{
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 10px;
+
     display: block;
     transition: transform 0.3s;
 }
@@ -336,7 +352,7 @@ nav .fa{
     height: 0;
     width: 100%;
     background: linear-gradient(white, rgb(255, 0, 0));
-    border-radius: 10px;
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -761,10 +777,12 @@ nav .fa{
 
 .tabs-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 40px;
     gap: 40px;
-
+    animation: appear 2.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 .tab-card{
@@ -775,11 +793,11 @@ nav .fa{
     padding: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.595);
     position: relative;
-    animation: appear 2.5s ease-in-out;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
     transition: 0.5s;
     cursor: pointer;
+    animation: appear 2.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 .tab-card img{
@@ -800,27 +818,30 @@ nav .fa{
     position: absolute;
     top: 80%;
     padding: 7px 15px;
-    border-radius: 10px;
     font-size: 15px;
     transition: 0.3s;
     border: 0;
     text-decoration: none;
-    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.664);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.521);
 }
 
 .tab-text{
     position: absolute;
     top:65%;
-    background: rgba(255, 0, 0, 0.822);
+    background: rgb(255, 0, 0);
     padding: 5px;
     padding-bottom: 0;
-    border-radius: 10px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.521);
 }
 
 .route .tab-text{
     background: none;
     padding: none;
     top: 25px;
+    box-shadow: none;
+    color: white;
 }
 
 .route .tab-card button{
@@ -828,11 +849,14 @@ nav .fa{
 }
 
 .tab-text h3{
-    font-size: 20px;
+    font-size: 18px;
     padding-right: 3px;
     padding-left: 3px;
 }
 
+.route .tab-text h3{
+    font-size: 25px;
+}
 
 .tab-card button:hover{
     background: black;
@@ -876,4 +900,12 @@ nav .fa{
 
 .footer hr{
     animation: none;
+}
+
+/* temp team */
+.temp-team{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin: auto;
 }
